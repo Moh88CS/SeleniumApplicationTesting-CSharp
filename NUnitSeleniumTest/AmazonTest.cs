@@ -39,5 +39,9 @@ public class AmazonTest
     }
 
     [OneTimeTearDown]
-    public static void TearDownDirver() => driver.Quit();
+    public static void TearDownDirver()
+    {
+        driver.Quit();
+        driver.Dispose();
+    } 
 }
