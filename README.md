@@ -28,3 +28,8 @@ Before you begin, ensure you have the following installed:
    ```bash
    git clone https://github.com/Moh88CS/SeleniumApplicationTesting-CSharp.git
    cd SeleniumApplicationTesting-CSharp
+   dotnet restore
+   dotnet test
+
+## Reporting
+NUnit generates detailed test execution reports, which can be viewed in your IDE or CI/CD pipeline. For enhanced reporting, you can integrate tools like Allure or ExtentReports.
