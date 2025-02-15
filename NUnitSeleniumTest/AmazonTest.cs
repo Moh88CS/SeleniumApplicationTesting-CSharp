@@ -10,14 +10,18 @@ public class AmazonTest
 {
     private const string SearchPhrase = "iphone";
 
-    private static ChromeDriver driver;
+    private static ChromeDriver? driver;
 
     [OneTimeSetUp]
     public static void SetUpWebDriver()
     {
         new DriverManager().SetUpDriver(new ChromeConfig());
-        driver = new ChromeDriver();
+        var options = new ChromeOptions();
+        options.AddArgument("--disable-blink-features=AutomationControlled");
+        options.AddArgument("user-agent=Mozilla/5.0...");
+        driver = new ChromeDriver(options);
         driver.Manage().Window.Maximize();
+        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
     }
 
     [Test]
@@ -41,7 +45,7 @@ public class AmazonTest
     [OneTimeTearDown]
     public static void TearDownDirver()
     {
-        driver.Quit();
+        driver!.Quit();
         driver.Dispose();
     } 
 }

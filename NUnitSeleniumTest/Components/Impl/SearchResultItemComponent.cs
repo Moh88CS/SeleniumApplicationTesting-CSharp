@@ -5,7 +5,8 @@ namespace NUnitSeleniumTest.Components.Impl;
 
 public class SearchResultItemComponent(IWebElement rootElement) : WebComponent(rootElement)
 {
-    private static readonly By TitleSelector = By.CssSelector("h2 .a-link-normal");
+    private static readonly By TitleSelector = By.CssSelector(".a-link-normal.s-line-clamp-2");
+
 
     public SearchResultItem ConvertToSearchResultItem() =>
         new SearchResultItem(
