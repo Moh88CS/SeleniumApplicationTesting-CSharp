@@ -35,4 +35,9 @@ Before you begin, ensure you have the following installed:
 NUnit generates detailed test execution reports, which can be viewed in your IDE or CI/CD pipeline. For enhanced reporting, you can integrate tools like Allure or ExtentReports.
 
 ## IMPORTATNT NOTICE
-Please note that this test will not pass anymore becuase Amazon added a CAPTCHA, which prevents automation. I'm trying to set up or get API access to bypass this and also might consider other approaches. For now, please view the code statically. Thank you :)
+Please note that Amazon added a CAPTCHA, which prevents automation. I bypassed this by using Use Selenium Stealth techniques:
+- Random User-Agents: Simulate different browsers.
+- Proxy Rotation: Use services like BrightData, ScraperAPI, or residential proxies.
+- Headless Detection Evasion: Modify Chrome options.
+
+This is not the best solution for real world scenarios. The best thing to do is useually either get API access to Amazon, for example. We could also use Headless Browser with Puppeteer-Selenium. I used this bypass becuase it's simple and there is no possible way bypassing the CAPTCHA would cause harm in this particular case. Thank you for understanding :)
